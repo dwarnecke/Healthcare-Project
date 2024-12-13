@@ -1,10 +1,15 @@
-# ScAN: Suicide Attempt and Ideation Events Dataset
+# Suicide Notes — Inferring suicide diagnoses from medical notes
 
 ------------------------
 
-[Paper](https://aclanthology.org/2022.naacl-main.75.pdf) | [Pre-Processing](https://github.com/bsinghpratap/ScAN/tree/main/get_data) | [Annotations](https://github.com/bsinghpratap/ScAN/tree/main/annotations) | [Models](#) | [Leaderboard](https://bsinghpratap.github.io/scan/leaderboard)
+Credit for all code outside the project directory goes to https://github.com/bsinghpratap/ScAN/tree/main
 
-
-
-> The model links would be updated soon. 
-> Please feel free to email me for any questions at brawat [at] umass.edu. Thanks.
+Instructions for creating the necessary files for training new models
+* Load the notes data into csv files
+  * Download a copy of the MIMIC NOTEEVENTS.csv file from physio.net
+  * Place the csv file in the get_data/resources directory
+  * Load the relevant notes by running the get_data/get_HADM_files.ipynb jupyter notebook
+  * Save the sentences of notes into files by running the project/get_data.ipynd jupyter notebook
+* Download the embedding vectors
+  * Download the 400K, 200 dimensional GloVe word vectors from https://nlp.stanford.edu/projects/glove/
+  * Place the embeddings in the project/datasets folder
